@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      ACCESS_NETWORK_STATE is required to read connection type and VPN/proxy
+      posture (NetworkCollector). It is a normal (non-runtime) permission.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+      Location permissions are OPTIONAL and declared by the SDK so GPS signals
+      work out of the box. The host app must still REQUEST the runtime permission
+      (an Activity is required to show the system dialog — a library cannot).
+      If you never use GPS, you may remove these with tools:node="remove".
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+</manifest>
