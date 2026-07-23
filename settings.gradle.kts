@@ -14,9 +14,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "gs-android-sdk"
+rootProject.name = "gv-android-sdk"
 
-include(":gsintelligence")
+include(":gvintelligence")
 // The example app is optional and only included when present (it is shipped in
 // the public mirror but ignored by JitPack's library resolution).
 if (file("example/build.gradle.kts").exists()) {

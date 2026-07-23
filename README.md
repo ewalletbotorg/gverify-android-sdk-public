@@ -1,6 +1,6 @@
-# GS Intelligence — Android SDK
+# Gamma Verify Intelligence — Android SDK
 
-GS Intelligence helps you stop fraudsters from abusing your Android app while
+Gamma Verify Intelligence helps you stop fraudsters from abusing your Android app while
 giving you rich insight into every customer who uses it. By collecting device,
 network, location, behavioral, and tamper signals, the SDK helps you defend
 against account takeovers, multiple-account signups, and fraudulent payments.
@@ -49,12 +49,12 @@ published version:
 
 ```kotlin
 dependencies {
-    implementation("com.github.ewalletbotorg:gsgeo-android-sdk-public:1.0.0")
+    implementation("com.github.ewalletbotorg:gverify-android-sdk-public:1.0.0")
 }
 ```
 
 > Replace `1.0.0` with the latest tag from
-> https://github.com/ewalletbotorg/gsgeo-android-sdk-public/releases.
+> https://github.com/ewalletbotorg/gverify-android-sdk-public/releases.
 
 ---
 
@@ -100,17 +100,17 @@ If you never use GPS (`gps = GpsMode.OFF`), no location permission is needed.
 ## Quick start
 
 ```kotlin
-import com.gammasweep.gsintelligence.GS
-import com.gammasweep.gsintelligence.GpsMode
+import com.gammasweep.gvintelligence.GS
+import com.gammasweep.gvintelligence.GpsMode
 
 // Step 1 — once, at app start (e.g. in Application.onCreate)
-GS.configure(context = applicationContext, clientId = "YOUR_CLIENT_ID")
+GV.configure(context = applicationContext, clientId = "YOUR_CLIENT_ID")
 
 // Step 2 — per protected user action (login, checkout, signup). It's a suspend
 // function, so call it from a coroutine.
 lifecycleScope.launch {
     try {
-        val session = GS.getSession()
+        val session = GV.getSession()
         // Send `session` to YOUR backend (see "Sending the token to your backend").
         // Never call the GS fraud-check endpoint directly from the app.
     } catch (e: GSException.GpsRequired) {
@@ -125,18 +125,18 @@ lifecycleScope.launch {
 
 ## Configuration options
 
-`GS.configure` accepts the following options. Only `context` and `clientId` are
+`GV.configure` accepts the following options. Only `context` and `clientId` are
 required.
 
 ```kotlin
-GS.configure(
+GV.configure(
     context = applicationContext,
     clientId = "YOUR_CLIENT_ID",
     gps = GpsMode.PROMPT,   // OFF | SILENT | PROMPT | REQUIRED
     behavior = true,        // always-on session-timing capture
     persistence = true,     // stable device id in SharedPreferences (false for GDPR mode)
     sandbox = false,        // true for gk_test_ keys → unencrypted payload
-    debug = false,          // verbose Logcat logging (tag: "gs")
+    debug = false,          // verbose Logcat logging (tag: "gv")
     maxWaitTimeMs = 4_000L, // wall-clock collection budget (ms)
 )
 ```
@@ -204,8 +204,8 @@ For integration help, API keys, and documentation, contact your GS account team.
 ## Changelog
 
 ### 1.0.0
-- Initial public release of the GS Intelligence Android SDK.
-- Two-step `GS.configure` / `GS.getSession` integration.
+- Initial public release of the Gamma Verify Intelligence Android SDK.
+- Two-step `GV.configure` / `GV.getSession` integration.
 - Device, network, GPS, behavioral, and tamper signal collection.
 - Token format byte-compatible with the GS web and iOS SDKs.
 - Sandbox mode for `gk_test_` keys.
