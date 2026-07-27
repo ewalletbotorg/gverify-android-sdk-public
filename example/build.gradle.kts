@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.gammasweep.gvdemo"
+    namespace = "com.gammaverify.gvdemo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.gammasweep.gvdemo"
+        applicationId = "com.gammaverify.gvdemo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

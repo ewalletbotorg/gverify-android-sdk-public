@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.crypto
+package com.gammaverify.gvintelligence.crypto
 
 /**
  * Pure-Kotlin Base64 (standard + URL-safe), padding-free, with no Android or

@@ -1,10 +1,10 @@
-package com.gammasweep.gvintelligence.signals
+package com.gammaverify.gvintelligence.signals
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import com.gammasweep.gvintelligence.token.NetworkSignals
+import com.gammaverify.gvintelligence.token.NetworkSignals
 
 /**
  * Collects connection type plus VPN/proxy posture (HC134). Mirrors the iOS

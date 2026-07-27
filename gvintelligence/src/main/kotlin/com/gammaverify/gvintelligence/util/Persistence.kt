@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.util
+package com.gammaverify.gvintelligence.util
 
 import android.content.Context
 
@@ -13,8 +13,14 @@ import android.content.Context
  * host app enables Android Auto Backup. Documented in the README.
  */
 object Persistence {
+    // DO NOT RENAME. This is an on-disk identity key (and the matching iOS
+    // Keychain service string). Changing it resets every installed user's
+    // `true_device_id`, breaking device-history continuity and "same device,
+    // multiple users" detection. It intentionally keeps the legacy prefix even
+    // though the Kotlin package is now com.gammaverify.gvintelligence.
     private const val PREFS = "com.gammasweep.gsintelligence"
     private const val KEY = "true_device_id"
+
 
     data class Result(val id: String, val present: Boolean)
 

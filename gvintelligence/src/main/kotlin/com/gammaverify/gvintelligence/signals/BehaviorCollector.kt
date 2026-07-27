@@ -1,6 +1,6 @@
-package com.gammasweep.gvintelligence.signals
+package com.gammaverify.gvintelligence.signals
 
-import com.gammasweep.gvintelligence.token.BehaviorSignals
+import com.gammaverify.gvintelligence.token.BehaviorSignals
 
 /**
  * Always-on behavioral capture. Native apps don't expose web-style mouse/

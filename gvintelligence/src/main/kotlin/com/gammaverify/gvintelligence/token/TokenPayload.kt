@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.token
+package com.gammaverify.gvintelligence.token
 
 import org.json.JSONArray
 import org.json.JSONObject

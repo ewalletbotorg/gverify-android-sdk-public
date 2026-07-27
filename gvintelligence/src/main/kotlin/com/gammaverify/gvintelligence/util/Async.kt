@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.util
+package com.gammaverify.gvintelligence.util
 
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.withTimeout

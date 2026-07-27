@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence
+package com.gammaverify.gvintelligence
 
 /**
  * GPS collection mode (mirrors the web/iOS SDK's GPS mode).

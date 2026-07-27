@@ -1,6 +1,6 @@
-package com.gammasweep.gvintelligence.crypto
+package com.gammaverify.gvintelligence.crypto
 
-import com.gammasweep.gvintelligence.token.TokenPayload
+import com.gammaverify.gvintelligence.token.TokenPayload
 import java.math.BigInteger
 import java.security.KeyFactory
 import java.security.SecureRandom

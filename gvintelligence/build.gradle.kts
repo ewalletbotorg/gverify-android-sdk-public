@@ -4,11 +4,11 @@ plugins {
     id("maven-publish")
 }
 
-val groupName: String by lazy { (project.findProperty("GROUP") as String?) ?: "com.gammasweep" }
+val groupName: String by lazy { (project.findProperty("GROUP") as String?) ?: "com.gammaverify" }
 val versionName: String by lazy { (project.findProperty("VERSION_NAME") as String?) ?: "1.0.0" }
 
 android {
-    namespace = "com.gammasweep.gvintelligence"
+    namespace = "com.gammaverify.gvintelligence"
     compileSdk = 34
 
     defaultConfig {
@@ -57,7 +57,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = groupName
-                artifactId = "gsintelligence"
+                artifactId = "gvintelligence"
                 version = versionName
             }
         }

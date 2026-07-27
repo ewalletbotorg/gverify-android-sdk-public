@@ -1,26 +1,26 @@
-package com.gammasweep.gvintelligence
+package com.gammaverify.gvintelligence
 
 import android.content.Context
-import com.gammasweep.gvintelligence.crypto.GSKeys
-import com.gammasweep.gvintelligence.crypto.sandboxToken
-import com.gammasweep.gvintelligence.crypto.sealJwe
-import com.gammasweep.gvintelligence.signals.BehaviorCollector
-import com.gammasweep.gvintelligence.signals.DeviceCollector
-import com.gammasweep.gvintelligence.signals.EnvironmentCollector
-import com.gammasweep.gvintelligence.signals.GpsCollector
-import com.gammasweep.gvintelligence.signals.NetworkCollector
-import com.gammasweep.gvintelligence.signals.TamperCollector
-import com.gammasweep.gvintelligence.token.BrowserSignals
-import com.gammasweep.gvintelligence.token.EmailSignals
-import com.gammasweep.gvintelligence.token.GpsSignals
-import com.gammasweep.gvintelligence.token.Signals
-import com.gammasweep.gvintelligence.token.StorageSignals
-import com.gammasweep.gvintelligence.token.TamperSignals
-import com.gammasweep.gvintelligence.token.TokenPayload
-import com.gammasweep.gvintelligence.util.GSRandom
-import com.gammasweep.gvintelligence.util.Persistence
-import com.gammasweep.gvintelligence.util.epochMillis
-import com.gammasweep.gvintelligence.util.withBudget
+import com.gammaverify.gvintelligence.crypto.GSKeys
+import com.gammaverify.gvintelligence.crypto.sandboxToken
+import com.gammaverify.gvintelligence.crypto.sealJwe
+import com.gammaverify.gvintelligence.signals.BehaviorCollector
+import com.gammaverify.gvintelligence.signals.DeviceCollector
+import com.gammaverify.gvintelligence.signals.EnvironmentCollector
+import com.gammaverify.gvintelligence.signals.GpsCollector
+import com.gammaverify.gvintelligence.signals.NetworkCollector
+import com.gammaverify.gvintelligence.signals.TamperCollector
+import com.gammaverify.gvintelligence.token.BrowserSignals
+import com.gammaverify.gvintelligence.token.EmailSignals
+import com.gammaverify.gvintelligence.token.GpsSignals
+import com.gammaverify.gvintelligence.token.Signals
+import com.gammaverify.gvintelligence.token.StorageSignals
+import com.gammaverify.gvintelligence.token.TamperSignals
+import com.gammaverify.gvintelligence.token.TokenPayload
+import com.gammaverify.gvintelligence.util.GSRandom
+import com.gammaverify.gvintelligence.util.Persistence
+import com.gammaverify.gvintelligence.util.epochMillis
+import com.gammaverify.gvintelligence.util.withBudget
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
@@ -160,12 +160,12 @@ object GV {
 
         // Run independent collectors concurrently under their own budgets.
         val deviceTask = async(Dispatchers.Default) {
-            withBudget(budget, com.gammasweep.gvintelligence.token.DeviceSignals()) {
+            withBudget(budget, com.gammaverify.gvintelligence.token.DeviceSignals()) {
                 DeviceCollector.collect(context, persisted.id)
             }
         }
         val networkTask = async(Dispatchers.Default) {
-            withBudget(minOf(budget, 2_500L), com.gammasweep.gvintelligence.token.NetworkSignals()) {
+            withBudget(minOf(budget, 2_500L), com.gammaverify.gvintelligence.token.NetworkSignals()) {
                 NetworkCollector.collect(context)
             }
         }
@@ -204,7 +204,7 @@ object GV {
         val behavior = if (cfg.behavior) {
             BehaviorCollector.snapshot()
         } else {
-            com.gammasweep.gvintelligence.token.BehaviorSignals()
+            com.gammaverify.gvintelligence.token.BehaviorSignals()
         }
 
         val signals = Signals(

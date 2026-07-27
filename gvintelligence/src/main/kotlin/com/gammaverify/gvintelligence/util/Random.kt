@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.util
+package com.gammaverify.gvintelligence.util
 
 import java.security.MessageDigest
 import java.security.SecureRandom

@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.signals
+package com.gammaverify.gvintelligence.signals
 
 import android.content.Context
 import android.hardware.display.DisplayManager

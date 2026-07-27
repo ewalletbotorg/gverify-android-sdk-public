@@ -1,7 +1,7 @@
-package com.gammasweep.gvintelligence.signals
+package com.gammaverify.gvintelligence.signals
 
 import android.os.Build
-import com.gammasweep.gvintelligence.token.TamperSignals
+import com.gammaverify.gvintelligence.token.TamperSignals
 import java.io.File
 import java.security.KeyStore
 

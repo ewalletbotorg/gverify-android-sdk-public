@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.signals
+package com.gammaverify.gvintelligence.signals
 
 import android.Manifest
 import android.content.Context
@@ -8,8 +8,8 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
 import android.os.Looper
-import com.gammasweep.gvintelligence.GpsMode
-import com.gammasweep.gvintelligence.token.GpsSignals
+import com.gammaverify.gvintelligence.GpsMode
+import com.gammaverify.gvintelligence.token.GpsSignals
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 

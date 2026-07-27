@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.signals
+package com.gammaverify.gvintelligence.signals
 
 import android.app.ActivityManager
 import android.content.Context
@@ -6,9 +6,9 @@ import android.os.Build
 import android.provider.Settings
 import android.util.DisplayMetrics
 import android.view.WindowManager
-import com.gammasweep.gvintelligence.token.DeviceSignals
-import com.gammasweep.gvintelligence.token.ScreenSignals
-import com.gammasweep.gvintelligence.token.UserAgentData
+import com.gammaverify.gvintelligence.token.DeviceSignals
+import com.gammaverify.gvintelligence.token.ScreenSignals
+import com.gammaverify.gvintelligence.token.UserAgentData
 import java.util.Locale
 import java.util.TimeZone
 

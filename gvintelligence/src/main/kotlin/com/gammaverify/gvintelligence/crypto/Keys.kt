@@ -1,4 +1,4 @@
-package com.gammasweep.gvintelligence.crypto
+package com.gammaverify.gvintelligence.crypto
 
 /**
  * Bundled public keys, indexed by `kid`. The SDK encrypts the device token's
