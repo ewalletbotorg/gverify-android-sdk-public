@@ -1,6 +1,6 @@
 # GS Demo — example app
 
-A minimal Jetpack Compose app that exercises the Gamma Verify Intelligence Android SDK
+A minimal Jetpack Compose app that exercises the GS Intelligence Android SDK
 end-to-end:
 
 - **Get Session** — seals a token. In sandbox mode (`sandbox = true` + a
@@ -17,7 +17,7 @@ end-to-end:
 
 ## Run it
 
-1. Open `packages/gv-android-sdk` in Android Studio (it's a self-contained Gradle
+1. Open `packages/gs-android-sdk` in Android Studio (it's a self-contained Gradle
    project once the public tree is assembled).
 2. Set `clientId` in `MainActivity.kt`.
 3. Pick the `example` run configuration and run on a device or emulator.

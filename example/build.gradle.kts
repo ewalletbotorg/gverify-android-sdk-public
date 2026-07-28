@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.gammaverify.gvdemo"
+    namespace = "com.gammasweep.gsdemo"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.gammaverify.gvdemo"
+        applicationId = "com.gammasweep.gsdemo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -38,7 +38,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":gvintelligence"))
+    implementation(project(":gsintelligence"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
     val composeBom = platform("androidx.compose:compose-bom:2024.06.00")

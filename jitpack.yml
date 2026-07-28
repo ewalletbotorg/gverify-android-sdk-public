@@ -1,8 +1,8 @@
-# JitPack build configuration for gverify-android-sdk-public.
+# JitPack build configuration for gsgeo-android-sdk-public.
 # JitPack builds the AAR on demand when a consumer requests a version/tag.
 # Pin a JDK that matches the Android Gradle Plugin requirement (AGP 8.x needs 17).
 jdk:
   - openjdk17
 
 install:
-  - ./gradlew :gvintelligence:publishToMavenLocal -x test
+  - ./gradlew :gsintelligence:publishToMavenLocal -x test
