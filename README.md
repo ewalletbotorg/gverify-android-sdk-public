@@ -143,7 +143,7 @@ GV.configure(
 
 | Option          | Default          | Description |
 |-----------------|------------------|-------------|
-| `clientId`      | —                | Your client identifier. Required. |
+| `clientId`      | —                | Your GammaVerify Client ID (Project Slug), found in Dashboard → Project Settings → General → **Client ID / Project Slug**. Required. |
 | `gps`           | `PROMPT`         | `OFF` (never collect), `SILENT` (only if already granted), `PROMPT` (use if granted), `REQUIRED` (throw if no fix). |
 | `behavior`      | `true`           | Captures always-on session-timing behavior signals. |
 | `persistence`   | `true`           | Stores a stable device id in SharedPreferences. Set `false` for a privacy/GDPR mode with no persistent id. |
